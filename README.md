@@ -11,10 +11,12 @@ import (
 )
 
 func main() {
-    logger := glog.New(true)
-    logger.SetLevel(glog.LogLevelDebug)
+    glog.SetLevel(glog.LogLevelDebug)
+    glog.SetReload(true)
+    glog.SetInterval(20)
     
-    logger.Debugf("Test %s", "test")
+    // start use the glog
+    glog.Debugf("Test %s", "test")
 }
 
 ```
